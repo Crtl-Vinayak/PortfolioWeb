@@ -1,0 +1,187 @@
+body, html {
+  overflow: auto;
+}
+
+body {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 900px;
+  background-color: #9285e6;
+}
+
+#mainContainer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto 10fr;
+}
+
+#navContainer {
+  display: grid;
+  grid-template-columns: auto 50px auto 50px auto;
+  grid-template-rows: 20px auto 20px;
+}
+
+#navCenterContainer {
+  background-color: #4c00ff;
+  box-shadow: 5px 10px #3400a6;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 10px 50px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  padding: 0px 30px 0px 30px;
+}
+
+.navElements {
+  color: white;
+  text-decoration: none;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  min-width: 200px;
+}
+
+.navElements:hover {
+  font-weight: bold;
+}
+
+#emptySpace {
+  animation-name: pushMainTxt;
+  animation-delay: 0s;
+  animation-duration: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pushMainTxt {
+    0% {height:0px}
+    100% {height:100px}
+}
+
+#textAreaContainer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 10px 30px 30px auto 10px;
+}
+
+#imgContainer {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 125px 200px 125px;
+}
+
+#rpi_car_img {
+  max-width: 370px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  border-radius: 10%;
+}
+
+#wiskunde_boeken_img {
+  max-width: 370px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  border-radius: 10%;
+}
+
+.textAreaAppear {
+  opacity: 0;
+  background-color: #efe8ff;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  z-index: 1;
+}
+
+@keyframes lineAppear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+#line1 {
+  animation-name: lineAppear;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  grid-column-start: 10;
+  grid-column-end: 11;
+}
+
+#line2 {
+  animation-name: lineAppear;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  grid-column-start: 9;
+  grid-column-end: 10;
+}
+
+#line3 {
+  animation-name: lineAppear;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  grid-column-start: 8;
+  grid-column-end: 9;
+}
+
+#line4 {
+  animation-name: lineAppear;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  grid-column-start: 7;
+  grid-column-end: 8;
+}
+
+#line5 {
+  animation-name: lineAppear;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.textAboutMe {
+  opacity: 0;
+  font-family: "Segoe UI";
+  grid-column-start: 7;
+  grid-column-end: 10;
+  animation-name: appearTxt;
+  animation-delay: 2.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#title {
+  font-size: 30px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  z-index: 2;
+}
+
+#text {
+  font-size: 20px;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  z-index: 2;
+}
+
+@keyframes appearTxt {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
