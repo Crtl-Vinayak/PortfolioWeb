@@ -18,15 +18,22 @@ body {
 
 #navContainer {
   display: grid;
-  grid-template-columns: auto 50px auto 50px auto;
+  grid-template-columns: auto 50px 50px auto 50px auto;
   grid-template-rows: 20px auto 20px;
+}
+
+#logo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 #navCenterContainer {
   background-color: #4c00ff;
   box-shadow: 5px 10px #3400a6;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
   border-radius: 10px 50px 20px;
